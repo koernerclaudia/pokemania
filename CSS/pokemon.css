@@ -2,8 +2,23 @@ body {
     font-family: 'Arial'; 
 }
 
-
 img {
     max-height: 200px;
 }
 
+.pokemon-list {
+    font-family: Arial, sans-serif;
+}
+.pokemon-item {
+    margin: 10px;
+}
+.pokemon-name {
+    font-weight: bold;
+}
+.pokemon-height {
+    color: green;
+}
+.big-note {
+    color: red;
+    font-weight: bold;
+}
