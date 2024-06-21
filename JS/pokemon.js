@@ -32,9 +32,20 @@ document.write(output + "<br>");
 
 
 
-    
-   
+// =================
+// Other possible solution listed from CF:
 
+// let pokemonList = [
+//     // pokemon objects
+//     ];
+    
+//     for (let i = 0; i < pokemonList.length; i++){
+//       // document.write("<p>" + pokemonList[i].name + "</p>");
+//       // printing pokemonList[i]’s other details
+//       // ...
+//     }
+   
+// =================
 
 // let PokemonList = [
 //     { name: 'Bulbasaur', height: 0.7, type:['grass', 'poison'], weight: 6.9},
