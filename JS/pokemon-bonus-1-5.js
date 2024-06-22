@@ -20,43 +20,109 @@
 
 // ================================ Part2 of Exercise 1.5
 
-let pokemonRepository = (function () {
-    let PokemonList = [
-    { name: 'Bulbasaur', height: 0.7, typeof:['grass', 'poison'], weight: 6.9},
-    { name: 'Pikachu', height: 0.4, typeof:'electric', weight: 6},
-    { name: 'Charizard', height: 1.7, typeof:['fire', ' flying'], weight: 90.5},
-    { name: 'Squirtle', height: 0.5, typeof:'water', weight: 9},
-    { name: 'Jigglypuff', height: 0.5, typeof:['normal', 'fairy'], weight: 5.5},
-    { name: 'Eevee', height: 1.2, type:[' ', ' '], weight: 0}
-  ]
+// let pokemonRepository = (function () {
+//     let PokemonList = [
+//     { name: 'Bulbasaur', height: 0.7, typeof:['grass', 'poison'], weight: 6.9},
+//     { name: 'Pikachu', height: 0.4, typeof:'electric', weight: 6},
+//     { name: 'Charizard', height: 1.7, typeof:['fire', ' flying'], weight: 90.5},
+//     { name: 'Squirtle', height: 0.5, typeof:'water', weight: 9},
+//     { name: 'Jigglypuff', height: 0.5, typeof:['normal', 'fairy'], weight: 5.5},
+//     { name: 'Eevee', height: 1.2, type:[' ', ' '], weight: 0}
+//   ]
 
-    function getAll () {
-      return PokemonList;
-    }
+//     function getAll () {
+//       return PokemonList;
+//     }
 
-    function add(pokemon) {
-        PokemonList.push(pokemon);
-    }
+//     function add(pokemon) {
+//         PokemonList.push(pokemon);
+//     }
 
-              return {
-                add: add,
-                getAll: getAll,
-            }
-          })()
+//               return {
+//                 add: add,
+//                 getAll: getAll,
+//             }
+//           })()
 
-          function myPokemons(pokemon) {
-            console.log(pokemon.name + ' is ' + pokemon.height + ' tall, is of type: ' + pokemon.typeof + ' and weighs ' + pokemon.weight + 'kg.');
-            document.write(pokemon.name + " is " + pokemon.height + " tall, is of type: " + pokemon.typeof + " and weighs " + pokemon.weight + "kg.<p>===</p>");
-          }
-          pokemonRepository.add({name: 'Butterfree', height: 1.1, typeof:['bug', 'flying'], weight: 32})
-          pokemonRepository.getAll().forEach(myPokemons);
+//           function myPokemons(pokemon) {
+//             console.log(pokemon.name + ' is ' + pokemon.height + ' tall, is of type: ' + pokemon.typeof + ' and weighs ' + pokemon.weight + 'kg.');
+//             document.write(pokemon.name + " is " + pokemon.height + " tall, is of type: " + pokemon.typeof + " and weighs " + pokemon.weight + "kg.<p>===</p>");
+//           }
+//           pokemonRepository.add({name: 'Butterfree', height: 1.1, typeof:['bug', 'flying'], weight: 32})
+//           pokemonRepository.getAll().forEach(myPokemons);
 
-          document.write(pokemonRepository.getAll())
-          console.log(pokemonRepository.getAll())
-          console.log(pokemonRepository.getAll())
-          document.write(pokemonRepository.getAll())
+          // document.write(pokemonRepository.getAll())
+          // console.log(pokemonRepository.getAll())
+          // console.log(pokemonRepository.getAll())
+          // document.write(pokemonRepository.getAll())
 
 // ================================ End of Part2
+
+// ================================ Bonus task Exercise 1.5
+
+let pokemonRepository = (function () {
+  let PokemonList = [
+  { name: 'Bulbasaur', height: 0.7, typeof:['grass', 'poison'], weight: 6.9},
+  { name: 'Pikachu', height: 0.4, typeof:'electric', weight: 6},
+  { name: 'Charizard', height: 1.7, typeof:['fire', ' flying'], weight: 90.5},
+  { name: 'Squirtle', height: 0.5, typeof:'water', weight: 9},
+  { name: 'Jigglypuff', height: 0.5, typeof:['normal', 'fairy'], weight: 5.5},
+  { name: 'Eevee', height: 1.2, typeof:[' ', ' '], weight: 0}
+]
+
+function getAll() {
+  return PokemonList;
+}
+
+function add(pokemon) {
+  const expectedKeys = ['name', 'height', 'typeof', 'weight'];
+  
+  if (typeof pokemon === 'object' && pokemon !== null) {
+    const pokemonKeys = Object.keys(pokemon);
+    const hasAllKeys = expectedKeys.every(key => pokemonKeys.includes(key)) && pokemonKeys.length === expectedKeys.length;
+    
+    if (!hasAllKeys) {
+      console.log('Error: The Pokémon object does not have the correct keys.');
+      return;
+    }
+
+    if (!Array.isArray(pokemon.typeof) && typeof pokemon.typeof !== 'string') {
+      console.log('Error: The typeof property must be an array or a string.');
+    } else {
+      PokemonList.push(pokemon);
+    }
+  } else {
+    console.log('The parameter passed is not an object and cannot be added to the list.');
+  }
+}
+
+return {
+  add: add,
+  getAll: getAll
+};
+})();
+
+        function myPokemons(pokemon) {
+          console.log(pokemon.name + ' is ' + pokemon.height + ' tall, is of type: ' + pokemon.typeof + ' and weighs ' + pokemon.weight + 'kg.');
+          document.write(pokemon.name + " is " + pokemon.height + " tall, is of type: " + pokemon.typeof + " and weighs " + pokemon.weight + "kg.<p>===</p>");
+        }
+        
+        document.write(pokemonRepository.getAll())
+        pokemonRepository.add({name: 'Butterfree', height: 1.1, typeof:['bug', 'flying'], weight: 32})
+        pokemonRepository.add({ name: 'Charmander', height: 0.6, type: ['fire'], weight: 8.5 }); 
+      
+        // pokemonRepository.add({ name: 'Lisa', height: 1.0, typeof: 123, weight: 20.0 });
+        // pokemonRepository.getAll().forEach(myPokemons);
+
+        // document.write(pokemonRepository.getAll())
+        // console.log(pokemonRepository.getAll())
+        // console.log(pokemonRepository.getAll())
+        // document.write(pokemonRepository.getAll())
+
+
+// ================================ End of Bonus of Exercise 1.5, 
+
+
 
 
 // ================================ Code previous to Exercise 1.5
