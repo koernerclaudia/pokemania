@@ -6,16 +6,16 @@ img {
     max-height: 200px;
 }
 
-.pokemon-list {
+.poke-list {
     font-family: Arial, sans-serif;
 }
-.pokemon-item {
+.poke-item {
     margin: 10px;
 }
-.pokemon-name {
+.poke-name {
     font-weight: bold;
 }
-.pokemon-height {
+.poke-height {
     color: green;
 }
 .big-note {
