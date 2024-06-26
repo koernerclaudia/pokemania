@@ -29,32 +29,40 @@ let pokemonRepository = (function () {
     { name: 'Jigglypuff', height: 0.5, typeof:['normal', 'fairy'], weight: 5.5},
     { name: 'Eevee', height: 1.2, type:[' ', ' '], weight: 0}
   ]
+  let unorderedList = document.querySelector('ul');
+  let listItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = (PokemonList.name);
 
     function getAll () {
-      return PokemonList;
+    return PokemonList;
     }
 
     function add(pokemon) {
-        PokemonList.push(pokemon);
+    PokemonList.push(pokemon);
     }
 
-              return {
-                add: add,
-                getAll: getAll,
-            }
+         return {
+              add: add,
+    getAll: getAll,
+             }
+
+          
+
+
           })()
 
           function myPokemons(pokemon) {
-            console.log(pokemon.name + ' is ' + pokemon.height + ' tall, is of type: ' + pokemon.typeof + ' and weighs ' + pokemon.weight + 'kg.');
-            document.write(pokemon.name + " is " + pokemon.height + " tall, is of type: " + pokemon.typeof + " and weighs " + pokemon.weight + "kg.<p>===</p>");
+          console.log(pokemon.name + ' is ' + pokemon.height + ' tall, is of type: ' + pokemon.typeof + ' and weighs ' + pokemon.weight + 'kg.');
+          document.write(pokemon.name + " is " + pokemon.height + " tall, is of type: " + pokemon.typeof + " and weighs " + pokemon.weight + "kg.<p>===</p>");
           }
           pokemonRepository.add({name: 'Butterfree', height: 1.1, typeof:['bug', 'flying'], weight: 32})
           pokemonRepository.getAll().forEach(myPokemons);
 
           document.write(pokemonRepository.getAll())
-          console.log(pokemonRepository.getAll())
-          console.log(pokemonRepository.getAll())
-          document.write(pokemonRepository.getAll())
+          // console.log(pokemonRepository.getAll())
+          // console.log(pokemonRepository.getAll())
+          // document.write(pokemonRepository.getAll())
 
 // ================================ End of Part2
 
