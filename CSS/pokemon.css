@@ -5,20 +5,47 @@ body {
 img {
     max-height: 200px;
 }
-
-.poke-list {
+/* Just wanted the button to show and not have a bullet or simmilar anymore, showing that it is a list. */
+.pokemon-list {
     font-family: Arial, sans-serif;
+    list-style-type: none;
 }
-.poke-item {
-    margin: 10px;
+/* Added some button CSS here - somewhat copied from the 1st achievement. */
+button,
+.button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  min-width: 100px;
+
+  /* takes the font from the outer container */
+  font-family: inherit;
+  font-size: inherit;
+
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: red;
+  color: white;
+  text-decoration: none;
+
+  /* adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 5px;
+
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(136, 51, 255, 0.3);
+  transition-duration: 0.5s;
+  transition-property: opacity;
 }
-.poke-name {
-    font-weight: bold;
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.6;
 }
-.poke-height {
-    color: green;
-}
-.big-note {
-    color: red;
-    font-weight: bold;
-}
+
+
