@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
     let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=15';
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=5';
   
     function add(pokemon) {
       if (
@@ -38,10 +38,12 @@ let pokemonRepository = (function () {
     }
   
     function hideLoadingMessage() {
-      let loadingMessage = document.querySelector('.loading-message');
-      if (loadingMessage) {
-        document.body.removeChild(loadingMessage);
-      }
+      setTimeout(() => {
+        let loadingMessage = document.querySelector('.loading-message');
+        if (loadingMessage) {
+          document.body.removeChild(loadingMessage);
+        }
+      }, 500); // Adjust the delay time as needed (500ms in this example)
     }
   
     function loadList() {
@@ -49,7 +51,6 @@ let pokemonRepository = (function () {
       return fetch(apiUrl).then(function (response) {
         return response.json();
       }).then(function (json) {
-        hideLoadingMessage();
         json.results.forEach(function (item) {
           let pokemon = {
             name: item.name,
@@ -58,9 +59,10 @@ let pokemonRepository = (function () {
           add(pokemon);
           console.log(pokemon);
         });
+        setTimeout(hideLoadingMessage, 5000); // Ensure the loading message is shown for at least 5000ms
       }).catch(function (e) {
-        hideLoadingMessage();
         console.error(e);
+        setTimeout(hideLoadingMessage, 500); // Ensure the loading message is shown for at least 500ms
       });
     }
   
@@ -70,15 +72,15 @@ let pokemonRepository = (function () {
       return fetch(url).then(function (response) {
         return response.json();
       }).then(function (details) {
-        hideLoadingMessage();
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
         item.weight = details.weight;
         item.types = details.types;
         item.abilities = details.abilities;
+        setTimeout(hideLoadingMessage, 5000); // Ensure the loading message is shown for at least 500ms
       }).catch(function (e) {
-        hideLoadingMessage();
         console.error(e);
+        setTimeout(hideLoadingMessage, 500); // Ensure the loading message is shown for at least 500ms
       });
     }
   
