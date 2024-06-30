@@ -1,51 +1,169 @@
-body {
-    font-family: 'Arial'; 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+* {
+  box-sizing: border-box;
 }
 
-img {
-    max-height: 200px;
+body {
+  font-family: 'Arial'; 
+  background-color: #fcc636;
+   
 }
-/* Just wanted the button to show and not have a bullet or simmilar anymore, showing that it is a list. */
-.pokemon-list {
-    font-family: Arial, sans-serif;
+@font-face {
+  font-family: 'Pokemon Solid'; 
+  src: url('fonts/PokemonSolidNormal.eot');
+  src: url('fonts/PokemonSolidNormal.eot?#iefix') format('embedded-opentype'),
+      url('fonts/PokemonSolidNormal.woff2') format('woff2'),
+      url('fonts/PokemonSolidNormal.woff') format('woff'),
+      url('fonts/PokemonSolidNormal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 30px auto;
+  max-width: 600px;
+  justify-content: center;
+  text-align: center;
+}
+
+.special {
+  font-family: 'Pokemon Solid';
+}
+h1 {
+  font-size: 100px;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+  img {
+    max-width: 80%;
+  }
+  
+  .pokemon-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
     list-style-type: none;
-}
-/* Added some button CSS here - somewhat copied from the 1st achievement. */
-button,
-.button {
-  /* overwrites browser defaults and resets the border */
+    padding: 0;
+  }
+  
+  button,
+  .button {
   border: none;
   min-width: 100px;
-
-  /* takes the font from the outer container */
   font-family: inherit;
   font-size: inherit;
-
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: red;
+  background-color: #e34131;
   color: white;
   text-decoration: none;
-
-  /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px 15px;
   border-radius: 20px;
   margin: 5px;
-
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(136, 51, 255, 0.3);
-  transition-duration: 0.5s;
-  transition-property: opacity;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity, color;
+  -o-transition-property: opacity, color;
+  transition-property: opacity, color;
+  }
+  
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
   cursor: pointer;
-
-  /* reduces the opacity of the button to 80% */
+  color: black;
   opacity: 0.6;
-}
+  
+  }
+  
+  #modal-container {
+  display: none;
+  }
+  
+  #modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  overflow: auto;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  }
+  
+  .modal {
+  margin: auto;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 20px;
+  min-width: 300px;
 
+  }
+  
+  .modal img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  
+  .modal-close {
+  float: right bottom;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: 0;
+  background: #45d8e3;
+  color: #ffffff;
+  }
+  
+  .modal h1 {
+  margin-top: 0;
+  font-size: 30px;
+  }
+  
+  .modal p {
+  margin-bottom: 10px;
+  }
 
+  @media all and (max-width: 700px) {
+    .pokemon-list {
+      grid-template-columns: 1fr 1fr 1fr;
+     
+    }
+
+    .special {
+      font-size: 3rem;
+    }
+  
+    @media all and (max-width: 500px) {
+      .pokemon-list {
+        grid-template-columns: 1fr 1fr;
+        
+      }
+  
+      .special {
+        font-size: 2rem;
+      }
+    
+    }
+  }
+    
+  
