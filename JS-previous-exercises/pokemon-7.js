@@ -6,12 +6,12 @@ let pokemonRepository = (function () {
   function add(pokemon) {
     if (
       typeof pokemon === "object" &&
-      "name" in pokemon
-      // "detailsUrl": item.url
+      "name" in pokemon,
+      "detailsUrl" in pokemon
     ) {
       pokemonList.push(pokemon);
     } else {
-      console.log("pokemon is not correct");
+      // console.log("pokemon is not correct");
     }
   }
   function getAll() {
@@ -50,7 +50,7 @@ function loadList() {
         detailsUrl: item.url
       };
       add(pokemon);
-      console.log(pokemon)
+      // console.log(pokemon)
     });
   }).catch(function (e) {
     console.error(e);

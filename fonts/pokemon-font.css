@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Pokemon Solid';
+    src: url('PokemonSolidNormal.eot');
+    src: url('PokemonSolidNormal.eot?#iefix') format('embedded-opentype'),
+        url('PokemonSolidNormal.woff2') format('woff2'),
+        url('PokemonSolidNormal.woff') format('woff'),
+        url('PokemonSolidNormal.ttf') format('truetype'),
+        url('PokemonSolidNormal.svg#PokemonSolidNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* body {
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+h1.sw-font-family-default,
+h2.sw-font-family-default {
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+section.sw-font-family-default,
+header.sw-font-family-default,
+nav.sw-font-family-default,
+footer.sw-font-family-default,
+div.sw-font-family-default,
+span.sw-font-family-default,
+small.sw-font-family-default,
+pre.sw-font-family-default,
+p.sw-font-family-default,
+b.sw-font-family-default,
+li.sw-font-family-default,
+ul.sw-font-family-default,
+a.sw-font-family-default,
+h3.sw-font-family-default,
+h4.sw-font-family-default,
+h5.sw-font-family-default,
+h6.sw-font-family-default {
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+input.sw-font-family-default,
+textarea.sw-font-family-default {
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.sw-font-family-default::-webkit-input-placeholder,
+.sw-font-family-default::-moz-placeholder,
+.sw-font-family-default:-ms-input-placeholder,
+.sw-font-family-default:-moz-placeholder {
+    font-family: 'Pokemon Solid', sans-serif;
+}
+ */
