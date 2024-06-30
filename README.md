@@ -6,7 +6,11 @@ This is a version of a *Pokédex* (Pokémon-Index) set up during my Web Dev Trai
 
 ## Built 
 This database works with the the external open source Pokémon API 
-and Javascript. There is 1 external other resource - a background picture of Pikachu - taken from here: 
+https://pokeapi.co/
+
+and Javascript. There is 1 external other resource - a background picture of Pikachu 
+- taken from here: 
+https://wallpapers.com/wallpapers/cute-pikachu-in-pokemon-anime-6z16jnz6bvgmfaqa.html
 
 ### The project consists of the following files: 
 - 1 HTML file to setup the page.
