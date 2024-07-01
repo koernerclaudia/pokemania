@@ -4,8 +4,16 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -26,11 +34,18 @@ body {
 }
 
 .site {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 10px auto 30px auto;
   max-width: 600px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
@@ -48,9 +63,13 @@ h1 {
   }
   
   .pokemon-list {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     list-style-type: none;
     padding: 0;
   }
@@ -145,6 +164,7 @@ h1 {
 
   @media all and (max-width: 700px) {
     .pokemon-list {
+      -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
      
     }
@@ -155,6 +175,7 @@ h1 {
   
     @media all and (max-width: 500px) {
       .pokemon-list {
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         
       }
