@@ -121,7 +121,7 @@ let pokemonAPI = (function () {
             item.abilities = details.abilities.map((abilityInfo) => abilityInfo.ability.name).join(', ');
     
             // Show the modal with the loaded details
-            modal.showModal(capitalizeFirstLetter(item.name), 'Height: ' + details.height + '0 cm', 'Weight: ' + details.weight + 'kg', details.sprites.front_default);
+            modal.showModal(capitalizeFirstLetter(item.name), 'Height: ' + details.height + '0cm', 'Weight: ' + details.weight + 'kg', details.sprites.front_default);
         }).catch(function (e) {
             console.error(e);
         });
