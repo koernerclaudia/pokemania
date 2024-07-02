@@ -1,16 +1,19 @@
 # Title: Poké-Mania
-*(this document is WIP)*
+*(this project and this readme file are still WIP)*
+
+Status: 2 July 2024
 
 ## Description 
 This is a version of a *Pokédex* (Pokémon-Index) set up during my Web Dev Training with CareerFoundry. The task was to build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
 
 ## Built 
 This database works with the the external open source Pokémon API 
-https://pokeapi.co/
+<a href="https://pokeapi.co/" target="_blank">
 
 and Javascript. There is 1 external other resource - a background picture of Pikachu 
-- taken from here: 
-https://wallpapers.com/wallpapers/cute-pikachu-in-pokemon-anime-6z16jnz6bvgmfaqa.html
+- taken from here: <a href="https://wallpapers.com/wallpapers/cute-pikachu-in-pokemon-anime-6z16jnz6bvgmfaqa.html" target="_blank">Link to Example</a>
+
+
 
 ### The project consists of the following files: 
 - 1 HTML file to setup the page.
