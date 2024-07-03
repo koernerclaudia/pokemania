@@ -21,7 +21,7 @@ body {
   background-color: #fcc636;
    
 }
-@font-face {
+/* @font-face {
   font-family: 'Pokemon Solid'; 
   src: url('fonts/PokemonSolidNormal.eot');
   src: url('fonts/PokemonSolidNormal.eot?#iefix') format('embedded-opentype'),
@@ -31,7 +31,7 @@ body {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 .site {
   display: -webkit-box;
