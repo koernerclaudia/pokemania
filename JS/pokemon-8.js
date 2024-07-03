@@ -37,12 +37,13 @@ let modal = (function () {
         imageElement.setAttribute("alt", "Pokemon picture");
 
         // Construct the modal, adding the parts of the modal one after another
-        modal.appendChild(closeButtonElement);
+        modalContainer.appendChild(modal);
         modal.appendChild(titleElement);
         modal.appendChild(contentElement_height);
         modal.appendChild(contentElement_weight);
         modal.appendChild(imageElement);
-        modalContainer.appendChild(modal);
+        modal.appendChild(closeButtonElement);
+   
 
         // for the function 'showModal' the modal shall be visible
         modalContainer.classList.add('is-visible');
