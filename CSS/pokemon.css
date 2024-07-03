@@ -1,16 +1,10 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 
-/*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
-*/
+
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,17 +15,6 @@ body {
   background-color: #fcc636;
    
 }
-/* @font-face {
-  font-family: 'Pokemon Solid'; 
-  src: url('fonts/PokemonSolidNormal.eot');
-  src: url('fonts/PokemonSolidNormal.eot?#iefix') format('embedded-opentype'),
-      url('fonts/PokemonSolidNormal.woff2') format('woff2'),
-      url('fonts/PokemonSolidNormal.woff') format('woff'),
-      url('fonts/PokemonSolidNormal.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-} */
 
 .site {
   display: -webkit-box;
@@ -63,6 +46,7 @@ h1 {
   }
   
   .pokemon-list {
+    font-family: Arial;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
