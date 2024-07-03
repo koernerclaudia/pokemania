@@ -11,11 +11,11 @@
     font-display: swap;
 }
 
-body {
+/* body {
     font-family: 'Pokemon Solid', sans-serif;
-}
+} */
 
-h1.sw-font-family-default,
+/* h1.sw-font-family-default,
 h2.sw-font-family-default {
     font-family: 'Pokemon Solid', sans-serif;
 }
@@ -51,4 +51,4 @@ textarea.sw-font-family-default {
 .sw-font-family-default:-moz-placeholder {
     font-family: 'Pokemon Solid', sans-serif;
 }
-
+ */
