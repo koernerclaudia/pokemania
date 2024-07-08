@@ -1,7 +1,7 @@
 # Title: Poké-Mania
 *(this project and this readme file are still WIP)*
 
-Status: 2 July 2024
+Status: 9 July 2024
 
 ## Description 
 This is a version of a *Pokédex* (Pokémon-Index) set up during my Web Dev Training with CareerFoundry. The task was to build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
