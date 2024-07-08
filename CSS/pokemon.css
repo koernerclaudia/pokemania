@@ -45,7 +45,7 @@ h1 {
     max-width: 80%;
   }
   
-  .pokemon-list {
+  .list-group {
     font-family: Arial;
     display: -ms-grid;
     display: grid;
@@ -57,9 +57,14 @@ h1 {
     list-style-type: none;
     padding: 0;
   }
+
+  .navbar-brand, .nav-item{
+    font-family: 'Pokemon';
+    font-size: 30px;
+  }
   
-  button,
-  .button {
+  btn,
+  .btn {
   border: none;
   min-width: 100px;
   font-family: inherit;
@@ -78,10 +83,10 @@ h1 {
   transition-property: opacity, color;
   }
   
-  button:hover,
-  button:focus,
-  .button:hover,
-  .button:focus {
+  btn:hover,
+  btn:focus,
+  .btn:hover,
+  .btn:focus {
   cursor: pointer;
   color: black;
   opacity: 0.6;
@@ -129,7 +134,7 @@ h1 {
        object-fit: contain;
   }
   
-  .modal-close {
+  .modal_close {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -137,9 +142,14 @@ h1 {
   background: #45d8e3;
   color: #ffffff;
   }
+
+  .modal-title {
+    color: #000000;
+    font-size: 30px;
+  }
   
-  .modal h2 {
-    font-family: 'Pokemon Solid';
+  .modal h2 h3 {
+    font-family: 'Pokemon';
   margin-top: 20px;
   font-size: 20px;
   }
@@ -149,7 +159,7 @@ h1 {
   }
 
   @media all and (max-width: 700px) {
-    .pokemon-list {
+    .list-group {
       -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
      
@@ -160,7 +170,7 @@ h1 {
     }
   
     @media all and (max-width: 500px) {
-      .pokemon-list {
+      .list-group {
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         
