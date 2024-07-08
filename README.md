@@ -18,6 +18,7 @@ and Javascript. There is 1 external other resource - a background picture of Pik
 - 1 HTML file to setup the page.
 - 1 CSS for all the styling
 - 1 Javascript to pull info from the API and set up the functions for the list and the modals.
+- Bootstrap 5 has been applied - I am using their modal and navbar.
 
 ### How this app works now:
 Currently it is a list of Pokémon Names showing up on buttons. When a Pokémon button is clicked it opens a modal that displays more information about the respective Pokémon
