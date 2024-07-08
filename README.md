@@ -1,4 +1,4 @@
-# Title: Poké-Mania
+# Title: PokéMania
 *(this project and this readme file are still WIP)*
 
 Status: 9 July 2024
