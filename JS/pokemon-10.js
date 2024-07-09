@@ -43,6 +43,11 @@ let modal = (function () {
     };
 })();
 
+// Function to capitalize the first letter of a name
+function capitalizeFirstLetter(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
 // //IIFE for Event Listeners for closing the modal
 // (function () {
 //     let modalContainer = document.querySelector('#modal-container');
