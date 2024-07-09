@@ -80,15 +80,15 @@ h1 {
   background-color: #e34131;
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-  margin: 5px;
-  -webkit-transition-duration: 0.5s;
-       -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-property: opacity, color;
-  -o-transition-property: opacity, color;
-  transition-property: opacity, color;
+  padding: 8px 8px;
+  border-radius: 25px;
+ 
+  -webkit-transition-duration: 2ms;
+       -o-transition-duration: 2ms;
+          transition-duration: 2ms;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
   }
   
   btn:hover,
@@ -96,9 +96,10 @@ h1 {
   .btn:hover,
   .btn:focus {
   cursor: pointer;
-  color: black;
-  opacity: 0.6;
-  
+  color: white;
+  background-color: #000000;
+  opacity: 0.8;
+
   }
 
   #container {
