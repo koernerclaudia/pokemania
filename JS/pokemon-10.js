@@ -11,12 +11,12 @@ let modal = (function () {
         modalBody.empty();
 
         let titleElement = $('<h1 style=font-family:"Pokemon Solid">' + item.name + '</h1>');
-        let imageElement = $('<img class="modal-img" style="width:50%">');
+        let imageElement = $('<img class="modal-img" style="width:45%">');
         imageElement.attr("src", item.imageUrl);
-        let heightElement = $("<p>" + "height:" + item.height + "0cm" + "</p>");
-        let weightElement = $("<p>" + "weight:" + item.weight + " kg" + "</p>");
-        let typesElement = $("<p>" + "types: " + item.types + "</p>");
-        let abilitiesElement = $("<p>" + "abilities: " + item.abilities + "</p>");
+        let heightElement = $("<p>" + "Height: " + item.height + "0 cm" + "</p>");
+        let weightElement = $("<p>" + "Weight: " + item.weight + " kg" + "</p>");
+        let typesElement = $("<p>" + "Types: " + item.types + "</p>");
+        let abilitiesElement = $("<p>" + "Abilities: " + item.abilities + "</p>");
 
         modalTitle.append(titleElement);
         modalBody.append(imageElement);
