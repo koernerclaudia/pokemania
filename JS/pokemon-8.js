@@ -1,7 +1,7 @@
 //IIFE for Modal functionality
 let modal = (function () {
     // defining the Modal to open across the whole screen
-    let modalContainer = document.querySelector('#modal-container');
+    let modalContainer = document.querySelector('#mymodal');
     
     function showModal(item) {
         let modalTitle = $(".modal-title");
@@ -26,7 +26,7 @@ let modal = (function () {
         modalBody.append(abilitiesElement);
         // modalBody.appendChild(closeButtonElement);
    
-        $('exmapleModal').modal('show');
+        $('mymodal').modal('show');
 
         // for the function 'showModal' the modal shall be visible
         modalContainer.classList.add('is-visible');
