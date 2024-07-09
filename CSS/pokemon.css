@@ -32,6 +32,8 @@ body {
   text-align: center;
 }
 
+
+
 .special {
   font-family: 'Pokemon Solid';
 }
@@ -59,8 +61,9 @@ h1 {
     padding: 0;
   }
 
-  .navbar-brand, .nav-item{
+  .navbar-brand, .nav-item, .nav-link{
     font-family: 'Pokemon';
+    color: #e34131;
     font-size: 30px;
   }
   
@@ -94,6 +97,9 @@ h1 {
   
   }
 
+  #container {
+    margin: auto;
+  }
   
   #mymodal {
   display: none;
