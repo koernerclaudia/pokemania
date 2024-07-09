@@ -82,13 +82,12 @@ h1 {
   text-decoration: none;
   padding: 8px 8px;
   border-radius: 25px;
- 
   -webkit-transition-duration: 2ms;
        -o-transition-duration: 2ms;
           transition-duration: 2ms;
-  -webkit-transition-property: color;
-  -o-transition-property: color;
-  transition-property: color;
+  -webkit-transition-property: opacity, color;
+  -o-transition-property: opacity, color;
+  transition-property: opacity, color;
   }
   
   btn:hover,
@@ -121,8 +120,8 @@ h1 {
   height: 40%;
   background: rgba(237, 174, 55, 0.5);
   z-index: 1051;
-  /* overflow: auto; */
-  /* display: -ms-grid; */
+  overflow: auto; 
+  display: -ms-grid;
   display: grid;
   text-align: center;
   border-radius: 30px;
