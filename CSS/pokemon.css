@@ -36,10 +36,11 @@ body {
   font-family: 'Pokemon Solid';
 }
 h1 {
-  font-size: 100px;
+  font-size: 50px;
   line-height: normal;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
   img {
     max-width: 80%;
@@ -92,6 +93,7 @@ h1 {
   opacity: 0.6;
   
   }
+
   
   #mymodal {
   display: none;
@@ -104,37 +106,24 @@ h1 {
           box-sizing: border-box;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 1051;
   overflow: auto;
   display: -ms-grid;
   display: grid;
   text-align: center;
   }
-  
-  .modal {
-  margin: auto;
- display: flex;
- flex-direction: column;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: #ffffff;
-  padding: 15px;
-  text-align: center;
-  align-items: center;
-  border-radius: 20px;
-  min-width: 300px;
 
-  }
+
   
   .modal img {
     -o-object-fit: contain;
        object-fit: contain;
   }
-  
-  .modal_close {
+
+  #mymodal.modal_close {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -145,7 +134,9 @@ h1 {
 
   .modal-title {
     color: #000000;
-    font-size: 30px;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
   }
   
   .modal h2 h3 {
