@@ -106,9 +106,9 @@ h1 {
   left: 0;
   width: 50%;
   height: 50%;
-  background: rgba(238, 15, 15, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  /* overflow: auto; */
+  overflow: auto;
   display: -ms-grid;
   display: grid;
   text-align: center;

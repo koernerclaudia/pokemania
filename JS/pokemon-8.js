@@ -12,7 +12,7 @@ let modal = (function () {
 
         let titleElement = $('<h3 style=font-family:"Pokemon Solid">' + item.name + '</h3>');
         let imageElement = $('<img class="modal-img" style="width:50%">');
-        imageElement.attr("src", item.imageURL);
+        imageElement.attr("src", item.imageUrl);
         let heightElement = $("<p>" + "height:" + item.height + "0cm" + "</p>");
         let weightElement = $("<p>" + "weight:" + item.weight + " kg" + "</p>");
         let typesElement = $("<p>" + "types: " + item.types + "</p>");
