@@ -11,8 +11,7 @@
     src: url('fonts/PokemonSolidNormal.eot?#iefix') format('embedded-opentype'),
         url('fonts/PokemonSolidNormal.woff2') format('woff2'),
         url('fonts/PokemonSolidNormal.woff') format('woff'),
-        url('fonts/PokemonSolidNormal.ttf') format('truetype'),
-        url('fonts/PokemonSolidNormal.svg#PokemonSolidNormal') format('svg');
+        url('fonts/PokemonSolidNormal.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
