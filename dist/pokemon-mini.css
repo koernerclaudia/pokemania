@@ -1,0 +1,174 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial'; 
+    background-color: #fcc636;
+     
+  }
+  
+  .site {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px auto 30px auto;
+    max-width: 600px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  
+  
+  
+  .special {
+    font-family: 'Pokemon Solid';
+    letter-spacing: 2px;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+    img {
+      max-width: 70%;
+    }
+    
+    .list-group {
+      font-family: Arial;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .navbar-brand, .nav-item, .nav-link{
+      font-family: 'Pokemon Solid';
+      color: #e34131;
+      font-size: 20px;
+      letter-spacing: 1px;
+      
+    }
+    
+    btn,
+    .btn {
+    border: none;
+    min-width: 100px;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #e34131;
+    color: white;
+    text-decoration: none;
+    padding: 8px 8px;
+    border-radius: 25px;
+    -webkit-transition-duration: 2ms;
+         -o-transition-duration: 2ms;
+            transition-duration: 2ms;
+    -webkit-transition-property: opacity, color;
+    -o-transition-property: opacity, color;
+    transition-property: opacity, color;
+    }
+    
+    btn:hover,
+    btn:focus,
+    .btn:hover,
+    .btn:focus {
+    cursor: pointer;
+    color: white;
+    background-color: #000000;
+    opacity: 0.8;
+  
+    }
+  
+    #container {
+      margin: auto;
+    }
+  
+  
+    .modal-title {
+      color: #000000;
+      font-size: 50px;
+      text-align: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  
+    .modal-body {
+      color: #000000;
+      font-size: 20px;
+      text-align: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  
+    .modal-img {
+      width: 50%;
+    }
+    
+    .modal h2 h3 {
+      font-family: 'Pokemon Solid';
+    margin-top: 20px;
+    font-size: 20px;
+    }
+    
+    .modal p {
+    margin-bottom: 10px;
+    }
+  
+    @media all and (max-width: 700px) {
+      .list-group {
+        -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+       
+      }
+  
+      .special {
+        font-family: 'Pokemon Solid';
+        font-size: 3rem;
+      }
+    
+      @media all and (max-width: 500px) {
+        .list-group {
+          -ms-grid-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+          
+        }
+    
+        .special {
+          font-size: 3rem;
+        }
+      
+      }
+    }
+      
+    

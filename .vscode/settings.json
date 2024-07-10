@@ -1,0 +1,16 @@
+{
+    "eslint.format.enable": true,
+    "eslint.useESLintClass": false,
+    "eslint.validate": [
+
+    ],
+
+
+
+
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"[javascript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+
+}

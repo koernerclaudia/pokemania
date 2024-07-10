@@ -129,8 +129,8 @@ let pokemonRepository = (function (modal, pokemonAPI) {
         button.addEventListener("click", function() {
             showDetails(pokemon);
         });
+
     }
-    
 
     function showDetails(item) {
         pokemonAPI.loadDetails(item);

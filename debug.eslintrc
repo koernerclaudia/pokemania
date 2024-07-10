@@ -7,7 +7,18 @@
       "eslint:recommended"
     ],
     "rules": {
-      "quotes": ["error", "single"]
+      "quotes": ["error", "single"],
+      "prettier/prettier": ["error"]
+    },
+  
+  
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
   }
-  
+
+
+
+
