@@ -1,16 +1,14 @@
-//IIFE for Modal functionality
+// IIFE for Modal functionality
 let modal = (function () {
-    // defining the Modal to open across the whole screen
-    let modalContainer = document.querySelector('#mymodal');
     
     function showModal(item) {
         let modalTitle = $(".modal-title");
         let modalBody = $(".modal-body");
-        let modalHeader = $(".modal-header");
         modalTitle.empty();
         modalBody.empty();
 
-        let titleElement = $('<h1 style=font-family:"Pokemon Solid">' + item.name + '</h1>');
+        let capitalizedTitle = capitalizeFirstLetter(item.name);
+        let titleElement = $('<h1 style="font-family:Pokemon Solid">' + capitalizedTitle + '</h1>');
         let imageElement = $('<img class="modal-img" style="width:45%">');
         imageElement.attr("src", item.imageUrl);
         let heightElement = $("<p>" + "Height: " + item.height + "0 cm" + "</p>");
@@ -25,56 +23,24 @@ let modal = (function () {
         modalBody.append(typesElement);
         modalBody.append(abilitiesElement);
    
-        $('mymodal').modal('show');
-
-        // for the function 'showModal' the modal shall be visible
-        modalContainer.classList.add('is-visible');
-    }
-
-    // Define the function 'hideModal'
-    function hideModal() {
-        modalContainer.classList.remove('is-visible');
+        $('#exampleModal').modal('show');
     }
 
     return {
-        showModal: showModal,
-        hideModal: hideModal
+        showModal: showModal
     };
 })();
-
-
-// //IIFE for Event Listeners for closing the modal
-// (function () {
-//     let modalContainer = document.querySelector('#modal-container');
-
-//     // Set up the action to close the modal by hitting escape
-//     window.addEventListener('keydown', (e) => {
-//         if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-//             modal.hideModal();
-//         }
-//     });
-
-//     // Close if the user clicks directly on the overlay /anywhere on the page
-//     modalContainer.addEventListener('click', (e) => {
-//         if (e.target === modalContainer) {
-//             modal.hideModal();
-//         }
-//     });
-// })();
 
 // Function to capitalize the first letter of a name
 function capitalizeFirstLetter(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-//IIFE for API interactions
+// IIFE for API interactions
 let pokemonAPI = (function () {
     // defining the API source
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=80';
 
-    // Function to load the list, fetch the API and return the response in JSON format.
-    // 'Unpack' the JSON format and get the result for each Pokemon - name and Details.
-    // If fetching the API does not work, return an error (catch function).
     function loadList() {
         return fetch(apiUrl).then(function (response) {
             return response.json();
@@ -91,35 +57,32 @@ let pokemonAPI = (function () {
         });
     }
 
-    // Function to load the details of a specific Pokemon
     function loadDetails(item) {
         let url = item.detailsUrl;
         return fetch(url).then(function (response) {
             return response.json();
         }).then(function (details) {
             // Add the details to the item
-            item.imageUrl = details.sprites.front_default;
+            item.imageUrl = details.sprites.other['official-artwork'].front_default;
             item.height = details.height;
             item.weight = details.weight;
             item.types = details.types.map((typeInfo) => typeInfo.type.name).join(', ');
             item.abilities = details.abilities.map((abilityInfo) => abilityInfo.ability.name).join(', ');
     
             // Show the modal with the loaded details
-            modal.showModal(capitalizeFirstLetter(item.name), 'Height: ' + details.height + '0cm', 'Weight: ' + details.weight + 'kg', details.sprites.front_default);
             modal.showModal(item);
         }).catch(function (e) {
             console.error(e);
         });
     }
     
-
     return {
         loadList: loadList,
         loadDetails: loadDetails
     };
 })();
 
-//IIFE for Pokemon Repository
+// IIFE for Pokemon Repository
 let pokemonRepository = (function (modal, pokemonAPI) {
     // defining variables
     let pokemonList = [];

@@ -40,14 +40,14 @@ body {
   letter-spacing: 2px;
 }
 h1 {
-  font-size: 50px;
+  font-size: 30px;
   line-height: normal;
   margin: 0;
   padding: 0;
   text-align: center;
 }
   img {
-    max-width: 80%;
+    max-width: 70%;
   }
   
   .list-group {
@@ -104,50 +104,24 @@ h1 {
   #container {
     margin: auto;
   }
-  
-  #mymodal {
-  display: none;
-  }
-  
-  #mymodal.is-visible {
-  /* position: fixed; */
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* top: 0;
-  left: 0; */
-  width: 40%;
-  height: 40%;
-  background: rgba(237, 174, 55, 0.5);
-  z-index: 1051;
-  overflow: auto; 
-  display: -ms-grid;
-  display: grid;
-  text-align: center;
-  border-radius: 30px;
-  }
 
-
-  
-  .modal img {
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-
-  #mymodal.modal_close {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  border: 0;
-  background: #45d8e3;
-  color: #ffffff;
-  }
 
   .modal-title {
     color: #000000;
     font-size: 50px;
     text-align: center;
     justify-content: center;
+  }
+
+  .modal-body {
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .modal-img {
+    width: 50%;
   }
   
   .modal h2 h3 {
